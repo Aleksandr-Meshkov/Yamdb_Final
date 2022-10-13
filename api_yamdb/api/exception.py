@@ -1,4 +1,4 @@
-class ValidationErrorField(Exception):
+class ValidationFieldError(Exception):
     """Ошибка данных запроса."""
 
     pass

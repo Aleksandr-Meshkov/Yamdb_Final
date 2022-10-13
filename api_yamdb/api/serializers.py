@@ -3,7 +3,6 @@ import datetime as dt
 from rest_framework import serializers
 from rest_framework.relations import SlugRelatedField
 from rest_framework.validators import UniqueValidator
-
 from reviews.models import Category, Comment, Genre, Review, Title, User
 
 
@@ -66,9 +65,9 @@ class ReviewSerializer(serializers.ModelSerializer):
         return data
 
     def validate_score(self, value):
-        MinValueValidator = 1
-        MaxValueValidator = 10
-        if not MinValueValidator <= value <= MaxValueValidator:
+        min = 1
+        max = 10
+        if not min <= value <= max:
             raise serializers.ValidationError(
                 'Оценкой может быть целое число в диапазоне от 1 до 10.'
             )
