@@ -32,4 +32,4 @@ jobs:
         # запуск проверки проекта по flake8
         python -m flake8
         # запуск проверки проекта по pytest
-        python pytest
+        pytest
