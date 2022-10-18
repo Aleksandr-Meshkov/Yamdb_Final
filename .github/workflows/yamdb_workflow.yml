@@ -5,12 +5,15 @@ on: [push]
 jobs:
   tests:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.7", "3.8", "3.9"]
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Python
+    - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
       with:
-        python-version: 3.7
+        python-version: ${{ matrix.python-version }}
     - name: Install dependencies
       run: | 
         python -m pip install --upgrade pip 
@@ -42,7 +45,7 @@ jobs:
           with:
             context: api_yamdb
             push: true
-            tags: aleksandr2021/infra_sp2:v1
+            tags: ${{ secrets.DOCKER_USERNAME }}/infra_sp2:v1
 
   deploy:
     runs-on: ubuntu-latest
@@ -57,7 +60,7 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         passphrase: ${{ secrets.PASSPHRASE }}
         script: |
-            sudo docker pull aleksandr2021/infra_sp2:v1
+            sudo docker ${{ secrets.DOCKER_USERNAME }}/infra_sp2:v1
             sudo docker-compose stop
             sudo docker-compose rm web
             touch .env
