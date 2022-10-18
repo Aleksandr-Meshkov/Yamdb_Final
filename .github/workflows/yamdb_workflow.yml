@@ -57,7 +57,7 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         passphrase: ${{ secrets.PASSPHRASE }}
         script: |
-            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/infra_sp2:v1
+            sudo docker pull aleksandr2021/infra_sp2:v1
             sudo docker-compose stop
             sudo docker-compose rm web
             touch .env
