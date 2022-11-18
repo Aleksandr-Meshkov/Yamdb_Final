@@ -20,9 +20,12 @@ ___
 ## **Стек технологий**
 **Запуск проекта:**
 
-**Клонировать репозиторий [infra_sp2](https://github.com/Aleksandr-Meshkov/infra_sp2) и перейти в него в командной строке:**
+**Клонировать репозиторий [
+Yamdb_Final](https://github.com/Aleksandr-Meshkov/
+Yamdb_Final) и перейти в него в командной строке:**
 
-- ```cd infra_sp2```
+- ```cd 
+Yamdb_Final```
 
 **Шаблон наполнения env-файла:**
 
