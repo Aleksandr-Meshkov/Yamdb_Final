@@ -35,7 +35,7 @@ ___
 
 **Команды для первого запуска:**
 
-  - ```docker-compose up``` - ***Cоздание контейнера***
+  - ```docker-compose up``` - ***Cоздание сборки контейнеров***
 
   - ```docker-compose exec web python manage.py migrate``` - ***Выполнить миграции:***
 
