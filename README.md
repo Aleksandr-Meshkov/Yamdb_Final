@@ -22,8 +22,7 @@ ___
 **Запуск проекта:**
 
 **Клонировать репозиторий [
-Yamdb_Final](https://github.com/Aleksandr-Meshkov/
-Yamdb_Final) и перейти в него в командной строке:**
+Yamdb_Final](https://github.com/Aleksandr-Meshkov/Yamdb_Final) и перейти в него в командной строке:**
 
 - ```cd 
 Yamdb_Final```
